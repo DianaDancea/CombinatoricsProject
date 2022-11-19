@@ -1,8 +1,8 @@
 //Combinatorics Research Project - Connection Between Hall's Marriage Theorem and Birkoff's Theorem
 //Class: MATH 3260 - Dr. Lei Cao
-//Project started: November 17
+//Project started: November 17, 2022
 //Author: Diana E. Dancea
-//Version: 1.0
+//Version: 1.1
 
 import java.util.*;
 
@@ -47,5 +47,36 @@ public class test {
         //Another method is the line below
         //System.out.println(Arrays.deepToString(data));
 
+
+        int column1Total = 0;
+        int row1Total = 0;
+        int column2Total = 0;
+        int row2Total = 0;
+
+        //This calculates the row and column totals of the first column and row
+        for(int i = 0; i < matrix.length; i++){
+            column1Total += matrix[i][0];
+        }
+
+        for(int i = 0; i < matrix.length; i++){
+            row1Total += matrix[0][i];
+        }
+
+        System.out.println("Column 1 Total:"+ column1Total);
+        System.out.println("Row 1 Total:"+ row1Total);
+
+        //This calculates the row and column totals of the second column and row
+        for(int i = 0; i < matrix.length; i++){
+            column2Total += matrix[i][1];
+        }
+
+        for(int i = 0; i < matrix.length; i++){
+            row2Total += matrix[1][i];
+        }
+
+        System.out.println("Column 2 Total:"+ column2Total);
+        System.out.println("Row 2 Total:"+ row2Total);
+
     }
+
 }
